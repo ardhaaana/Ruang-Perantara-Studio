@@ -306,7 +306,7 @@ import 'dart:async';
     
         var img = await picker.pickImage(source: media);
     
-        var uri = "http://192.168.1.32/flutter_upload_image/create.php";
+        var uri = "172.16.45.161/flutter_upload_image/create.php";
     
         var request = http.MultipartRequest('POST', Uri.parse(uri));
     
@@ -342,7 +342,7 @@ import 'dart:async';
       Future getImageServer() async {
         try{
     
-          final response = await http.get(Uri.parse('http://192.168.1.32/flutter_upload_image/list.php'));
+          final response = await http.get(Uri.parse('172.16.45.161/flutter_upload_image/list.php'));
     
           if(response.statusCode == 200){
             final data = jsonDecode(response.body);
